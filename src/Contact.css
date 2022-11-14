@@ -1,0 +1,23 @@
+#contact-row{
+    height: 800px;
+    padding-top: 100px;
+}
+#contact-col1{
+    text-align: center;
+}
+#contact-col2{
+    text-align: center;
+}
+.c-title{
+    text-align: center;
+}
+.mail{
+    color: black;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+#cicon{
+    font-size: 30px;
+    padding-top: 20px;
+    margin-right: 10px;
+}

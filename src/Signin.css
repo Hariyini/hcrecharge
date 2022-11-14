@@ -1,0 +1,18 @@
+.loginPage{
+    height: 800px;
+}
+.login-form{
+    background-color: white;
+    padding: 50px;
+    border: 1px solid teal;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+.login-label{
+    margin-top: 10px;
+
+}
+.login-input{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,50 @@
+#ni{
+    background-color: aliceblue;
+    border:3px solid#ffffff ;
+    border-radius: 10px;
+    height: 30px;
+    width: 40px;
+    
+
+  } 
+  
+  
+  .imglogonav{
+    width: 55px;
+    height: 55px;
+  }
+  
+  #inav{
+    
+    
+  
+    
+  }
+  #nava{
+    
+    margin-right: 20px;
+    text-decoration: none;
+    padding-right: 20px;
+    color:teal;
+    font-size: 1.4rem;
+  }
+  #navdiv{
+    margin-right: 5%;
+    
+    
+  }
+  #nb{
+    margin-left: 10%;
+    font-size: 3rem;
+    color: teal;
+    
+  }
+  @media (max-width:991px){
+    #nava{
+      padding: 10px;
+    }
+
+
+
+
+  }

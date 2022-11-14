@@ -1,0 +1,199 @@
+.rec-form{
+   padding: 50px;
+    box-shadow: 1px 2px 12px 12px rgba(84, 84, 85, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    width: fit-content;
+    margin-top: 10%;
+    background-color: white;
+color: teal;
+
+
+}
+.recharge{
+    
+    padding-bottom: 5%;
+}
+#recRow{
+    width: 100%;
+}
+.postLink{
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+.planDisplay{
+    height: 500px;
+    width: fit-content;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: inherit;
+}
+.ppt{
+    margin: auto;
+    
+    color: teal;
+    text-align: center;
+    font-size: 3rem;
+
+}
+.rec-form-label{
+    
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bolder;
+    
+}
+.rec-form-label2{
+    
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bolder;
+    
+}
+input{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+    font-weight: bolder;
+    
+}
+.mobile{
+    width: 200px;
+    border: 1px solid gray;
+}
+.op{
+    width: 200px;
+
+}
+.plan{
+    width: 200px;
+}
+.planCard{
+    width:500px;
+    height: 100px;
+    box-shadow: 2px 2px 2px 2px rgba(84, 84, 85, 0.2); 
+    margin-bottom: 10px;
+
+}
+.planLeft{
+    float:left;
+    margin:10px;
+    padding: 10px;
+    padding-top: 25px;
+    font-weight: bolder;
+    color: teal;
+
+}
+.planRight{
+    padding-right: 5%;
+    margin:10px;
+    text-align: justify;
+    font-size: 0.8rem;
+    padding-top: 10px;
+    
+    
+    margin: auto;
+}
+.planSpan{
+    margin-right: 20px;
+}
+.desSpan{
+    font-size:0.7rem ;
+    color: gray;
+}
+
+
+
+#pp{
+    text-align: center;
+    font-size: 6rem;
+    
+    margin-top: 6%;
+
+}
+#pay{
+    font-weight: bolder;
+}
+.postpaid-form{
+    margin: auto;
+    border-radius: 10px;
+    background-color: wihte;
+    color: teal;
+    box-shadow: 1px 2px 12px 12px rgba(84, 84, 85, 0.2); 
+    margin-top: 20%;
+    padding: 50px;
+    width: fit-content;
+    
+}
+#ppform{
+    width: 100%;
+    padding-bottom: 100px;
+}
+.recharge-now{
+    background-color:teal;
+    color: white;
+    border-radius: 2px;
+    margin-top: 25px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+@media screen and (max-width:600px) {
+    #pp{
+        margin-top: 5%;
+        font-size: 4rem;
+    }
+    .postpaid-form{
+        margin-left: 20%;
+        
+        margin-top: 10px;
+    }
+    .planCard{
+        width: 400px;
+        
+    }
+    .planDisplay{
+        padding-left: 20px;
+    }
+    .planLeft{
+        color: black;
+    }
+    
+}
+
+.tp{
+   width: 100%;
+margin-left: 10px;
+margin-right: 10px;    border: 1px solid gray;
+    padding: 10px;
+    
+}
+#tt{
+    padding: 10px;
+    margin: 20px;
+    margin-left: 10px;
+    border: 1px solid gray;
+}
+#tc{
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid gray;
+}
+.modal-title{
+    font-size: 2rem;
+    color: teal;
+}
+.modal-c{
+    padding-left: 20px;
+    padding-right: 20px;
+    border:none
+}
+
