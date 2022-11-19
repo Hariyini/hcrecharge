@@ -20,15 +20,9 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
-      
+    <div className="App">   
            
-
-
-      
-        
-           
-            <Navbar />
+          <Navbar />
            <Routes>
                  <Route exact path='/' element={<Home />}></Route>
                  <Route exact path='/recharge' element={< Recharge />}></Route>

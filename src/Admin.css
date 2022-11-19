@@ -1,0 +1,79 @@
+.paidDisplay{
+    height: 700px;
+    width: fit-content;
+    padding: 10px;
+    padding-left: 50px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: inherit;
+    text-align: center;
+}
+.admin{
+  
+    width: 100%;
+   
+}
+.planCard1{
+    width:500px;
+    height: 150px;
+    box-shadow: 2px 2px 2px 2px rgba(84, 84, 85, 0.2); 
+    margin-bottom: 10px;
+
+}
+.planLeft1{
+    float:left;
+    margin:10px;
+    padding: 10px;
+    padding-top: 25px;
+    font-weight: bolder;
+    color: black;
+    font-size: 20px;
+
+}
+.planRight1{
+    padding-right: 5%;
+    margin:10px;
+    text-align: justify;
+    font-size: 0.8rem;
+    padding-top: 10px;
+    
+    
+    margin: auto;
+}
+.planSpan1{
+    margin-right: 20px;
+}
+.desSpan1{
+    font-size:0.7rem ;
+    color: gray;
+}
+
+.admin-h2{
+    text-align: justify;
+    align-items: center;
+    color: teal;
+    font-weight: bolder;
+    padding-left: 50px;
+}
+.mobilenumber{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.paymentM{
+    font-size: 15px;
+    font-weight: bolder;
+
+}
+.testButton{
+    background-color: black;
+    position:absolute;
+    right: 0;
+    margin-right: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: small;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

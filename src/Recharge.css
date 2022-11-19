@@ -10,6 +10,7 @@ color: teal;
 
 
 }
+
 .recharge{
     
     padding-bottom: 5%;
@@ -131,7 +132,7 @@ input{
 }
 #ppform{
     width: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 .recharge-now{
     background-color:teal;

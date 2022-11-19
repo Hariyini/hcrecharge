@@ -3,11 +3,38 @@ import { useEffect, useState } from "react";
 
 import './Recharge.css';
 import MyModal2 from "./MyModal2";
+import axios from "axios";
 
 import { Link } from "react-router-dom";
 
  export default function Recharge(){
-
+    const [jio,setJio]=useState(
+        [
+            {amount:"",
+                data:"",
+                validity:"",
+                description:""
+            }
+        ]
+    );
+    const [airtelList1,setAirtelList1]=useState(
+        [
+            {amount:"",
+                data:"",
+                validity:"",
+                description:""
+            }
+        ]
+    );
+    const [jioList1,setJioList1]=useState(
+        [
+            {amount:"",
+                data:"",
+                validity:"",
+                description:""
+            }
+        ]
+    );
     const [mobile,setMobile]=useState();
     const [operatorName,setOperatorName]=useState("Bharti-Airtel");
     const [plan,setPlan]=useState();
@@ -30,8 +57,28 @@ import { Link } from "react-router-dom";
         setValidity('');
         setPlan('');
     }
-   
-    
+
+   useEffect(()=>{
+    fetch('/items').then((res)=>{
+        if(res.ok){
+            return res.json();
+        }
+    })
+    .then(jsonRes => setAirtelList1(jsonRes))
+    .catch(err => console.log(err));
+
+   },[airtelList1]);
+   useEffect(()=>{
+    fetch('/jios').then((res)=>{
+        if(res.ok){
+            return res.json();
+        }
+    })
+    .then(jsonRes => setJioList1(jsonRes))
+    .catch(err => console.log(err));
+
+   },[jioList1]);
+   console.log(jioList1);
 
     return(
         <div className="recharge">
@@ -72,7 +119,7 @@ import { Link } from "react-router-dom";
                                
                                < div className="planDisplay">
                                 {operatorName==="Bharti-Airtel" &&
-                                airtelList.map((item)=>
+                                airtelList1.map((item)=>
                                 <div className="planCard" onClick={()=>{setPlan(item.amount);setValidity(item.validity);setData(item.data);setDescription(item.description)}}>
                                                         <div className="planLeft">Rs {item.amount}</div>
                                                         <div className="planRight"><span className="planSpan"><b>validity:</b> {item.validity} </span><span className="planSpan"><b>data:</b> {item.data}</span> 
@@ -86,7 +133,7 @@ import { Link } from "react-router-dom";
                                
                                 }
                                 {operatorName==="Reliance-Jio" &&
-                                jioList.map((item)=>
+                                jioList1.map((item)=>
                                 <div className="planCard" onClick={()=>{setPlan(item.amount);setValidity(item.validity);setData(item.data);setDescription(item.description)}}>
                                                         <div className="planLeft">Rs {item.amount}</div>
                                                         <div className="planRight"><span className="planSpan"><b>validity:</b> {item.validity} </span><span className="planSpan"><b>data:</b> {item.data}</span> 
@@ -95,10 +142,11 @@ import { Link } from "react-router-dom";
                                                             
                                                         </div>
                                                        </div>
-                            )
+                                          )
                                
                                
-                                }</div>
+                                }
+                            </div>
 
                                     
 

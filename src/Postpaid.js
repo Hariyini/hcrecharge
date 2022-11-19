@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import MyModal from './MyModal.js'
 import './Recharge.css';
-
+import { Link } from "react-router-dom";
  export default function Postpaid(){
     const [show, setShow] = useState(false);
     const [mobile,setMobile]=useState();
@@ -17,12 +17,12 @@ import './Recharge.css';
     const handleReset=()=>{
         setMobile('');
         setAmount('');
-        setOperatorName('');
+        
     }
     
 
     return(
-        <div >
+        <div  >
 
 <div className="row" id="ppform">
     <div className="col-md-6" id="pp">
@@ -38,10 +38,8 @@ import './Recharge.css';
 
                             <label className="rec-form-label2">Operator</label><br/>
                             <select name="op" className="op" value={operatorName} onChange={(e)=>setOperatorName(e.target.value)}>
-                                {opList.map((val,key)=>
-                                <option key={key} value={val.op_name}  >{val.op_name}<img src={val.op_img} alt=''/></option>
-                                )
-                                }
+                            <option value="Bharti-Airtel" selected>Bharti-Airtel</option>
+                                <option value="Reliance-Jio"> Reliance-Jio</option>
                                 
                             </select>
                             <br/>
@@ -52,6 +50,7 @@ import './Recharge.css';
                             <button type="submit" className="recharge-now">Recharge</button>
                          </form>
         </div>
+        <p className="postLink"> <Link to='/recharge' className="postLink">Click here for Prepaid Recharge</Link></p>
 
 
 

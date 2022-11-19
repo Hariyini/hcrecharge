@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import './Recharge.css';
 import { RadioButton } from './RadioButton';
 import Paid from './Paid.js';
+import axios from 'axios';
 
 export default function MyModal2(props){
     const [show, setShow] = useState(false);
@@ -16,6 +17,22 @@ export default function MyModal2(props){
   const radioChangeHandler = (e) => {
     setPaymentMethod(e.target.value);
   };
+  const addItem=(e)=>{
+    e.preventDefault();
+    const newItem={
+        mobile:props.mobile,
+        operator:props.operator,
+        amount:props.amount,
+        validity:props.validity,
+        data:props.data,
+        description:props.description,
+        payment:paymentMethod
+    }
+    axios.post('/prepaiddone',newItem);
+    
+    props.onClick({ msg: 'Modal Closed!' });props.handleReset();handleShow(); 
+
+ }
     return(
         <div>
         <Modal show={props.show} onHide={() =>{ props.onHide({ msg: 'Cross Icon Clicked!' });props.handleReset()}} size="lg">
@@ -51,12 +68,12 @@ export default function MyModal2(props){
                         <td id='tc'>{props.data}</td>
                     </tr>
                     <tr>
-                        <td id='tt'><b>Amount</b></td>
+                        <td id='tt'><b>Description</b></td>
                         <td id='tc'>{props.description}</td>
                     </tr>
                 </table>
                 <br></br>
-                <form onSubmit={(e)=>{e.preventDefault();props.onClick({ msg: 'Modal Closed!' }); props.handleReset();handleShow(); }}>
+                <form onSubmit={addItem}>
                 <h4 style={{color:'teal'}}>Choose Payment method</h4>
                 <RadioButton
                     changed={radioChangeHandler}
